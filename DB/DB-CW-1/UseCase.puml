@@ -1,0 +1,33 @@
+@startuml
+title Станція технічного обслуговування (СТО)
+
+actor "Клієнт" as Client
+actor "Майстер" as Mechanic
+actor "Адміністратор" as Admin
+
+rectangle "Система СТО" {
+  usecase "Записатися на обслуговування" as UC1
+  usecase "Переглянути історію обслуговувань" as UC2
+  usecase "Отримати сповіщення про готовність" as UC3
+
+  usecase "Переглянути поточні замовлення" as UC4
+  usecase "Відмітити виконані роботи" as UC5
+  usecase "Переглянути контакт клієнта" as UC6
+
+  usecase "Додати працівника" as UC7
+  usecase "Переглянути всі замовлення" as UC8
+  usecase "Формувати звіти про роботи" as UC9
+}
+
+Client --> UC1
+Client --> UC2
+Client --> UC3
+
+Mechanic --> UC4
+Mechanic --> UC5
+Mechanic --> UC6
+
+Admin --> UC7
+Admin --> UC8
+Admin --> UC9
+@enduml
